@@ -1,0 +1,56 @@
+.doraemon {
+  width: 70px;
+  height: 10px;
+  background-color: #e8e7df;
+  padding: 15px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  line-height: 10px;
+
+  position: absolute;
+  top: 10px;
+  left: 800px;
+
+  transition-property: background-color, border-radius;
+  transition-duration: 1s;
+}
+.doraemon:hover {
+  background-color: rgb(213, 106, 106);
+  border-radius: 8px;
+}
+
+.doraemon:active {
+  background-color: rgb(88, 187, 227);
+}
+.bg-img {
+  width: 50%;
+  height: 880px;
+  object-fit: contain;
+}
+.do-img {
+  width: 15%;
+  height: 300px;
+  position: absolute;
+  top: 580px;
+  left: 750px;
+}
+@keyframes doraemon-moving {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(150px, -200px) rotate(-90deg);
+  }
+  50% {
+    transform: translate(0px, -600px) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-200px, -200px) rotate(-270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+.do-img.move {
+  animation: doraemon-moving 4s linear infinite;
+}
